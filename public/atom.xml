@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Chen Ce]]></title>
+  <link href="http://chence.cc/atom.xml" rel="self"/>
+  <link href="http://chence.cc/"/>
+  <updated>2013-01-19T03:23:34+08:00</updated>
+  <id>http://chence.cc/</id>
+  <author>
+    <name><![CDATA[Chen Ce]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hello Blog!]]></title>
+    <link href="http://chence.cc/blog/2013/01/19/hello-blog/"/>
+    <updated>2013-01-19T02:51:00+08:00</updated>
+    <id>http://chence.cc/blog/2013/01/19/hello-blog</id>
+    <content type="html"><![CDATA[<p>今天我就要把这个博客传上去。</p>
+
+<p>不会配置，不会markdown，不会添加评论，装了个<a href="http://panks.me/blog/2013/01/new-octopress-theme-fabric/">Fabric</a>主题。</p>
+
+<p>但是现在我就要开始blog了，不会的那些都不重要，重要的是我现在就要——</p>
+
+<p><strong>在路上</strong>了！</p>
+]]></content>
+  </entry>
+  
+</feed>
