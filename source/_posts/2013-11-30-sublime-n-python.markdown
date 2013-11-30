@@ -30,7 +30,7 @@ categories:
             "operand": false
         }]
     }
-### 3，shift+enter换行（非VIM模式）     //在Default (OSX).sublime-keymap文件里添加
+### 3，shift+enter换行     //在Default (OSX).sublime-keymap文件里添加
     {
         "keys": ["shift+enter"],
         "command": "run_macro_file",

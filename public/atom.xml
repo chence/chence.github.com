@@ -4,7 +4,7 @@
   <title><![CDATA[C.C 不接受评论]]></title>
   <link href="http://chence.github.com/atom.xml" rel="self"/>
   <link href="http://chence.github.com/"/>
-  <updated>2013-11-30T21:53:58+08:00</updated>
+  <updated>2013-11-30T22:10:09+08:00</updated>
   <id>http://chence.github.com/</id>
   <author>
     <name><![CDATA[Chen Ce]]></name>
@@ -47,7 +47,7 @@
 }
 </code></pre>
 
-<h3>3，shift+enter换行（非VIM模式）     //在Default (OSX).sublime-keymap文件里添加</h3>
+<h3>3，shift+enter换行     //在Default (OSX).sublime-keymap文件里添加</h3>
 
 <pre><code>{
     "keys": ["shift+enter"],
