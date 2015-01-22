@@ -1,0 +1,28 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Chen Ce
+tagline:          '无为青年'
+description:      '『...............』 『.................』'
+url:              http://chence.cc
+
+author:
+  name:           'chence'
+  email:          chence1990@gmail.com
+
+paginate:      5
+
+# Custom vars
+version:          0.0.3
+
+# Comments
+
+comments :
+    provider : duoshuo
+    duoshuo :
+          short_name : chence
