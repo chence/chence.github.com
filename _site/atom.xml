@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Chen Ce</title>
+ <link href="http://chence.cc/atom.xml" rel="self"/>
+ <link href="http://chence.cc/"/>
+ <updated>2015-01-23T02:52:57+08:00</updated>
+ <id>http://chence.cc</id>
+ <author>
+   <name>chence</name>
+   <email>chence1990@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>每个人都应该有一个Jekyll博客</title>
+   <link href="http://chence.cc/2015/01/04/jekyll%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/"/>
+   <updated>2015-01-04T00:00:00+08:00</updated>
+   <id>http://chence.cc/2015/01/04/jekyll搭建博客教程</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;http://7d9kkp.com1.z0.glb.clouddn.com/jianzhan.png&quot; alt=&quot;建站教程&quot;&gt;&lt;/p&gt;
+
+&lt;h6&gt;&lt;div align=middle&gt;免费使用Jekyll+Github Page搭建博客入门攻略&lt;/div&gt;&lt;/h6&gt;
+
+&lt;!-- more --&gt;
+
+&lt;hr&gt;
+
+&lt;div class=&quot;message&quot;&gt;
+&lt;small&gt;因为自己爱捣（zhuang）鼓（bi），从博客&lt;a href=&quot;http://hi.baidu.com/xctrun&quot; target=&quot;_blank&quot;&gt;百度空间&lt;/a&gt;到后来轻博客： &lt;a href=&quot;http://www.posterous.com/&quot; target=&quot;_blank&quot;&gt;Posterous&lt;/a&gt;、Tumblr、点点、推他、Lofter...再到自己搭建wordpress，写一些简单的静态html页面...我可真是在“玩”博客，而非写博客。直到有一天认识了Jekyll，被其极简写作理念所拯救......&lt;/small&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h4&gt;阅前说明&lt;/h4&gt;
+
+&lt;p&gt;此文主要记录了我自己在建此站点过程中遇见的一些问题和解决方案，完全是在自身能力层级范围内进行描述，有误之处望请包涵指正。&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;
+本教程适用对象包括但不限于：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;对建站、HTML、CSS等词汇完全免疫的人&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;会修改网页图片链接的入门小白设计师&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h4&gt;工具准备&lt;br&gt;&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;网页代码编辑器：Dreamweaver/&lt;a href=&quot;http://sublimetext.com&quot; target=&quot;_blank&quot;&gt;Sublime Text&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.oschina.net/news/50322/markdown-editors-and-tools&quot; target=&quot;_blank&quot;&gt;Markdown 编辑器&lt;/a&gt;（本人用的&lt;a href=&quot; http://realmacsoftware.com/typed&quot; target=&quot;_blank&quot;&gt;Typed&lt;/a&gt;）&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://windows.github.com/&quot; target=&quot;_blank&quot;&gt;Github客户端&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;abbr title=&quot;本文涉及到本地安装Jekyll进行预览，所以使用到OS X系统的终端&quot;&gt;Terminal(终端)&lt;/abbr&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;VPN工具，便于搜索更多资料（本人使用&lt;a href=&quot;https://ybb117.com/&quot; target=&quot;_blank&quot;&gt;鱼摆摆&lt;/a&gt;）&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;TXT/&lt;a href=&quot;https://www.yinxiang.com/&quot; target=&quot;_blank&quot;&gt;印象笔记&lt;/a&gt;，用于记录相关代码或者教程&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h4&gt;第0步：买域名&lt;/h4&gt;
+
+&lt;p&gt;懂的同学自行跳过此步，买域名为什么要放到前面来做掉？是为了防止有的同学弄到一半嫌麻烦，就没精神再捣鼓下去，而买了域名，钱都往里砸了，极有可能帮助剧情往下继续发展，有助于个人身心健康....
+&lt;br&gt;&lt;br&gt;
+域名可在&lt;a href=&quot;https://www.godaddy.com/&quot; target=&quot;_blank&quot;&gt;Go Daddy&lt;/a&gt;上使用支付宝购买，至于价格，相信我，你买的越贵你就越接近建站成功的时刻。&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;点此查看&lt;a href=&quot;http://jingyan.baidu.com/article/fec4bce20d364bf2618d8b39.html&quot; target=&quot;_blank&quot;&gt;怎样购买GoDaddy域名&lt;/a&gt;&lt;/em&gt;
+&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;英文不好？那就万网、美联互橙、新网随便挑一个国内域名服务商买吧。
+&lt;br&gt;
+关于域名这块，还需要域名解析的预备知识，你可先&lt;a href=&quot;http://www.xindingyue.com/new-godaddy-cname.html&quot; target=&quot;_blank&quot;&gt;收藏这个&lt;/a&gt;
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h4&gt;&lt;div align=center&gt;&lt;b&gt;那么接下来，让我们拿起工具开始吧！&lt;/b&gt;&lt;/div&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7d9kkp.com1.z0.glb.clouddn.com/heisencat.png&quot; alt=&quot;&quot;&gt;
+&lt;div align=right&gt;&lt;p&gt;&lt;cite&gt;&amp;mdash; 图片来自&lt;a href=&quot;https://github.com/jonrohan&quot; target=&quot;_blank&quot;&gt;@jonrohan&lt;/a&gt;&lt;/cite&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h4&gt;第1步：注册github并搭建Page&lt;/h4&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;p&gt;1,&lt;a href=&quot;https://github.com/&quot; target=&quot;_blank&quot;&gt;注册Github&lt;/a&gt;
+&lt;br&gt;&lt;br&gt;
+2,新建一个&lt;abbr title=&quot;Repository-中文叫做*版本库*或者*仓库*，相当于是一个目录，这个目录里面的每个文件的修改、删除，Github都能进行管理、跟踪以及复原&quot;&gt; Repository(仓库)&lt;/abbr&gt;
+&lt;br&gt;
+&lt;small&gt;如图，点击&lt;code&gt;+ New Repository&lt;/code&gt;&lt;/small&gt;
+&lt;img src=&quot;http://7d9kkp.com1.z0.glb.clouddn.com/$%7D%60Q(%7DT)8K_HL4CADIP4$%7E9.jpg&quot; alt=&quot;&quot;&gt;
+&lt;br&gt;
+3,输入相关配置，注意，在网址栏一定要输入&lt;code&gt;username.github.io&lt;/code&gt;，username指的是你注册时的用户名
+&lt;br&gt;
+&lt;img src=&quot;http://7d9kkp.com1.z0.glb.clouddn.com/dhkasdkldsajf.jpg&quot; alt=&quot;&quot;&gt;
+&lt;br&gt;
+4,新建好后，进入项目，点击右下角&lt;code&gt;Settings&lt;/code&gt;（设置）
+&lt;br&gt;
+&lt;img src=&quot;http://7d9kkp.com1.z0.glb.clouddn.com/fdksahfladf.jpg&quot; alt=&quot;&quot;&gt;
+&lt;br&gt;
+5,点击 &lt;code&gt;Automatic page generator&lt;/code&gt;（页面自动生成器）
+&lt;br&gt;
+&lt;img src=&quot;http://7d9kkp.com1.z0.glb.clouddn.com/fhalsjkfhka.jpg&quot; alt=&quot;&quot;&gt;
+&lt;br&gt;
+6,选择一个你喜欢的模板，点击生成...其实到这一步，我们的网站已经生成了，你可以通过自己的域名&lt;code&gt;username.github.io&lt;/code&gt;进行访问，只是目前，我们还没有学会对网站上的内容进行管理。&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h4&gt;第2步：解析自己的域名到&lt;code&gt;username.github.io&lt;/code&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;br&gt;
+参考我们在准备阶段收藏的网页，在域名服务商那里将域名使用CNAME解析到自己的&lt;code&gt;此处填写你的用户名.github.io&lt;/code&gt;。
+&lt;br&gt;
+接着，我们要进行github端的配置，进入我们所建的Page仓库主页，找到右下角的&lt;code&gt;Clone in Desktop&lt;/code&gt;，将项目克隆到本地。对了，你下好了github的客户端了么？还没有？那赶紧下了，然后登陆，这就要用到它的同步功能了（其实用github客户端同步文档对Geek而言是一件不太光彩的事，但暂时我们先忍忍吧，先让自己看到一点效果，得到一点成就感，鼓舞着自己走下去）
+我们新建一个文档，随便什么格式，然后在里面写入自己买的域名（注意：如果是CNAME解析，此处域名前需加上“www.”），然后将文档重命名成&lt;code&gt;CNAME&lt;/code&gt;,不要加任何文件格式后缀。
+&lt;br&gt;
+然后此CNAME文档拖到我们克隆到本地的仓库文件夹，使用github客户端进行同步上传。过不了多久，你就可以在浏览器中打进你的域名，你会惊奇地发现，它已经自动跳转到你在github上设置的默认网页了！&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h4&gt;第3步：本地安装git，并配置SSH&lt;/h4&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Git是什么？它是最先进的分布式版本控制系统，什么？听不懂？那我举个糖炒栗子甜蜜蜜地告诉你：假设你是个苦逼的设计师，那么下图应该是你常有的遭遇：&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7d9kkp.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202015-01-05%20%E4%B8%8B%E5%8D%887.54.31.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;这时候，git就出现了，他不但能帮你自动记录每次文档的改动，还能让其他人协作编辑，这样的话，你就不需要手动管理这么多文档，也不用U盘来U盘去的了，想看其他同学改了什么，直接瞄一眼修改记录解决了。简直是IT届的“暖男欲女”，赶紧用它“装逼”用它“飞！”....&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h6&gt;&lt;div align=middle&gt;&lt;b&gt;Windows&lt;/b&gt;&lt;/div&gt;&lt;/h6&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;去&lt;a href=&quot;http://www.git-scm.com/downloads&quot; target=&quot;_blank&quot;&gt;git-scm&lt;/a&gt;下载与你系统对应的安装包，然后安装。&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装完成后，在开始菜单找到“Git”-&amp;gt;“Git Bash”进行打开操作。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h6&gt;&lt;div align=middle&gt;&lt;b&gt;MAC OS  X&lt;/b&gt;&lt;/div&gt;&lt;/h6&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;先安装个Xcode，在AppStore搜索安装即可；(安装包大，下载有些时间)&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;运行Xcode，找到“Xcode”菜单-&amp;gt;“Preferences”，再“Downloads”标签，点击“Command Line Tools”，进行Install。因为Xcode其实默认集成了Git，只是没有安装。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br&gt;
+关于git安装的更多知识可参考&lt;a href=&quot;http://jingyan.baidu.com/article/72ee561ab93d2be16138dfed.html&quot; target=&quot;_blank&quot;&gt;《mac安装最新版本的git》&lt;/a&gt;和&lt;a href=&quot;http://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+&quot; target=&quot;_blank&quot;&gt;《安装git》&lt;/a&gt;.&lt;br&gt;
+要是你想学习更多关于git的知识，那就去看&lt;a href=&quot;http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000&quot; target=&quot;_blank&quot;&gt;大而全的Git教程&lt;/a&gt;.
+&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;b&gt;一些基本的git命令：&lt;/b&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;//创建一个仓库&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cellier&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cellier&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;pwd&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Users&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cellier&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;github&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;io&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//通过git init命令把这个目录变成Git可以管理的仓库&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;init&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;Initialized&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;empty&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Git&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;repository&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/Users/cellier/username.github.io /.git&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//要更新你的本地仓库至最新改动，执行:&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;pull&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;我们原先不是将github上的库clone到本地了吗，这个时候就需要使用&lt;code&gt;git init&lt;/code&gt;命令将这个文件夹目录设置为本地git可以管理的仓库。&lt;br&gt;
+关于ssh链接github可参考&lt;a href=&quot;http://www.xuanfengge.com/using-ssh-key-link-github-photo-tour.html&quot; target=&quot;_blank&quot;&gt;使用SSH密钥连接Github【图文教程】&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h4&gt;第4步：在本地安装Jekyll进行项目预览&lt;/h4&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;
+可参考下面两篇&lt;br&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://justcoding.iteye.com/blog/1959737
+&quot; target=&quot;_blank&quot;&gt;使用Github Pages建独立博客&lt;/a&gt;*&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/u012844814/article/details/28869997
+&quot; target=&quot;_blank&quot;&gt;Windows下运行jeklly,并在本地浏览Bootstrap文档&lt;/a&gt;*&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h3&gt;特殊问题及解决方案&lt;/h3&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;&lt;p&gt;解决gem install jekyll 运行无法知道的问题&lt;/dt&gt;
+  &lt;dd&gt;&lt;p&gt;&lt;b&gt;在代码  gem install jekyll    前加   sudo，在代码后加-V可看到安装详情过程（mac x os）&lt;/b&gt;&lt;/dd&gt;
+&lt;dt&gt;&lt;p&gt;解决gem ruby install 很慢的问题&lt;/dt&gt;
+  &lt;dd&gt;&lt;p&gt;&lt;b&gt;换成&lt;a href=&quot;http://ruby.taobao.org/&quot; target=&quot;_blank&quot;&gt;淘宝镜像源&lt;/a&gt;&lt;/b&gt;&lt;/dd&gt;
+  &lt;dt&gt;&lt;p&gt;解决报错：Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.&lt;/dt&gt;
+  &lt;dd&gt;&lt;p&gt;&lt;b&gt;打开 Xcode 会弹出更新说明，点击同意，安装完就可以了&lt;/b&gt;&lt;/dd&gt;
+  &lt;dt&gt;&lt;p&gt;测试SSH是否正常工作&lt;/dt&gt;
+  &lt;dd&gt;&lt;p&gt;&lt;b&gt;参考&lt;a href=&quot;http://www.51cto.com/art/200511/12216.htm
+&quot; target=&quot;_blank&quot;&gt;测试SSH&lt;/a&gt;&lt;/b&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h3&gt;添加ReadMore功能（文章摘要功能）&lt;/h3&gt;
+
+&lt;p&gt;&lt;br&gt;
+参考&lt;a href=&quot;http://blog.javachen.com/2013/08/31/my-jekyll-config/&quot; target=&quot;_blank&quot;&gt;JavaChen&amp;#39;s Blog&lt;/a&gt;和&lt;a href=&quot;http://truongtx.me/2013/05/01/jekyll-read-more-feature-without-any-plugin/&quot; target=&quot;_blank&quot;&gt;Trường TX blog&lt;/a&gt;
+&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;最终我的代码综合以上两位的方法,在index.html添加了如下图代码：&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://intorice.qiniudn.com/daima.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h3&gt;给文章页面添加多说评论&lt;/h3&gt;
+
+&lt;p&gt;&lt;p&gt;1,注册&lt;a href=&quot;http://duoshuo.com/&quot; target=&quot;_blank&quot;&gt;多说&lt;/a&gt;账号，得到short_name （如图，cellier-me就是我的shortname）
+&lt;br&gt;&lt;br&gt;
+&lt;img src=&quot;http://intorice.qiniudn.com/shortname.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;2,将生成的多说代码复制，找到仓库的_layouts文件夹下的post.html文档，使用代码编辑器打开，将多说代码粘贴到&lt;code&gt;{ { content } },&amp;lt;/div&amp;gt;&lt;/code&gt;的下面，对了，请养成随时Ctrl+S进行文档编辑保存的习惯
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;3,找到仓库里的_config.yml文档，代码编辑器打开，贴入如下代码
+&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+comments :&lt;br&gt;
+  &amp;nbsp;&amp;nbsp;&amp;nbsp;provider : duoshuo&lt;br&gt;
+ &amp;nbsp;&amp;nbsp;&amp;nbsp; duoshuo : &lt;br&gt;
+  &amp;nbsp;&amp;nbsp;&amp;nbsp;short&lt;em&gt;name : 你的short&lt;/em&gt;name
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;
+- 更多关于多说设置的内容可参考&lt;a href=&quot;http://beeder.me/2014/09/08/add-duoshuo-to-jekyllbootstrap/&quot; target=&quot;_blank&quot;&gt;beeder同学写的&lt;/a&gt;以及&lt;a href=&quot;http://havee.me/internet/2013-07/add-duoshuo-commemt-system-into-jekyll.html&quot; target=&quot;_blank&quot;&gt;havee同学写的&lt;/a&gt;
+&lt;br&gt;&lt;br&gt;
+- 而关于多说的CSS样式设置可参考&lt;a href=&quot;http://www.mmuuii360.com/duoshuo-css.html&quot; target=&quot;_blank&quot;&gt;多说评论框css样式表自定义&lt;/a&gt;
+&lt;br&gt;&lt;br&gt;
+- 样式代码贴入多说官网-个人-网站设置-基本设置里即可（下图位置）
+&lt;br&gt;&lt;br&gt;
+&lt;img src=&quot;http://intorice.qiniudn.com/weqrqwr.png&quot; alt=&quot;&quot;&gt;
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h6&gt;常用HTML代码：&lt;/h6&gt;
+
+&lt;p&gt;&lt;code&gt;
+// 新建标签页打开链接&lt;br&gt;
+&lt;code&gt;&amp;lt;a href=&amp;quot;此处填写要跳转的网址&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;链接文字&amp;lt;/a&amp;gt;&lt;/code&gt;
+&lt;/code&gt;&lt;br&gt;&lt;br&gt;
+&lt;code&gt;
+// 插入图片：width 设置图片宽度；height 设置图片高度&lt;br&gt;
+&lt;code&gt;&amp;lt;img src=&amp;quot;图片路径地址&amp;quot; width=&amp;quot;165&amp;quot; height=&amp;quot;60&amp;quot; /&amp;gt;&lt;/code&gt;
+&lt;/code&gt;&lt;br&gt;&lt;br&gt;
+&lt;code&gt;
+// 插入图片并居中&lt;br&gt;
+&lt;code&gt;&amp;lt;div align=center&amp;gt;&amp;lt;img src=&amp;quot;图片网址&amp;quot; width=&amp;quot;500&amp;quot; /&amp;gt;&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;br&gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h6&gt;常用HTML标签&lt;/h6&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;加粗字体&lt;/strong&gt;, 使用 &lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;斜体&lt;/em&gt;, 使用 &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;标注, 像 &lt;abbr title=&quot;一种超文本标记语言&quot;&gt;HTML&lt;/abbr&gt; 使用的是标签&lt;code&gt;&amp;lt;abbr&amp;gt;&lt;/code&gt;, 加上 &lt;code&gt;标注标题&lt;/code&gt; 来阐述被标注对象&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;引文, 像 &lt;cite&gt;&amp;mdash; 鲁迅&lt;/cite&gt;, 使用 &lt;code&gt;&amp;lt;cite&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;del&gt;删除线&lt;/del&gt; 使用标签 &lt;code&gt;&amp;lt;del&amp;gt;&lt;/code&gt; 而&lt;ins&gt;下滑线&lt;/ins&gt; 则使用 &lt;code&gt;&amp;lt;ins&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;上标字 &lt;sup&gt;2B&lt;/sup&gt; 使用 &lt;code&gt;&amp;lt;sup&amp;gt;&lt;/code&gt; 而下标字 &lt;sub&gt;还是2B&lt;/sub&gt;则用&lt;code&gt;&amp;lt;sub&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;tt&gt;打字机体&lt;/tt&gt;使用&lt;code&gt;&amp;lt;tt&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;u&gt;下划线&lt;/u&gt;还可使用&lt;code&gt;&amp;lt;u&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;特殊符号&lt;code&gt;&amp;amp;nbsp;&lt;/code&gt;表示&amp;nbsp;空格&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;big&gt;大字体&lt;/big&gt;使用&lt;code&gt;&amp;lt;big&amp;gt;&lt;/code&gt;，&lt;small&gt;小字体&lt;/small&gt;使用&lt;code&gt;&amp;lt;small&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;b&gt;最后，我想说的是：&lt;/b&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“没有十全十美的教程，如同不存在彻头彻尾的绝望”（改自村上春树语）&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;重要的是保持住一颗捣腾不安的心以及对知识的渴望与&lt;a href=&quot;https://www.baidu.com&quot; target=&quot;_blank&quot;&gt;找寻&lt;/a&gt;.....&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;本文转载自&lt;a href=&quot;http://www.cellier.me/2015/01/04/jekyll%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/&quot;&gt;网络&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>
